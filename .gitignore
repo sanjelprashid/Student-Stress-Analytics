@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc 
+*.pyo 
+*.pyd 
+*.sqlite3 
+*.db
+
+# Virtual environment
+venv/
+.env/
+superset-venv/
+
+# Logs
+logs/
+*.log 
+
+# VsCode settings
+.vscode/ 
+
+# Superset / Postgres junk
+*.pid
+*.db-journal
+
+# OS files 
+.DS_Store
+Thumbs.db
+
+# Data files 
+data/raw/
+data/extract/
+data/transform/*
+
+*.jar 
+
+*_SUCCESS
+*.crc 
+*.parquet
+
