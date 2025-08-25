@@ -23,9 +23,12 @@ This project shows a complete **ETL pipeline** using **Python + PySpark** to cle
 2. Download this project from GitHub and unzip.  
 3. Open the folder in **VS Code**.
 4. In a terminal, run:
+
+   ```
    - python -m venv venv
    - source venv/bin/activate         #Windows: venv\Scripts\activate
    - pip install -r requirements.txt
+   ```
 
 6. Put the two CSV files into `data/raw/` with these names:
    - `Stress_Dataset.csv`
@@ -50,7 +53,7 @@ This project shows a complete **ETL pipeline** using **Python + PySpark** to cle
 
 ---
 
-## 4) Project structure (what’s inside)
+## 4) Poject structure 
 
 ```
 stress_etl_project/
