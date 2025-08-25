@@ -21,22 +21,22 @@ This project shows a complete **ETL pipeline** using **Python + PySpark** to cle
 
 1. Install: **Python 3.12**, **Java 8+**, **PostgreSQL**, **Apache Superset**, **Git**.  
 2. Download this project from GitHub and unzip.  
-3. Open the folder in **VS Code**.  
+3. Open the folder in **VS Code**.
 4. In a terminal, run:
-   
    python -m venv venv
-   source venv/bin/activate                     # Windows: venv\Scripts\activate
+   source venv/bin/activate         #Windows: venv\Scripts\activate
    pip install -r requirements.txt
-   
-5. Put the two CSV files into `data/raw/` with these names:
+
+6. Put the two CSV files into `data/raw/` with these names:
    - `Stress_Dataset.csv`
    - `StressLevelDataset.csv`
-6. Start PostgreSQL. Note your password for the `postgres` user.  
-7. Run the ETL:
+
+7. Start PostgreSQL. Note your password for the `postgres` user.  
+8. Run the ETL:
    
    python etl/transform/execute.py
    
-8. Open **Superset** (usually http://localhost:8088), add the Postgres connection, create datasets from the three tables, and open the **Student Stress Monitoring** dashboard.
+9. Open **Superset** (usually http://localhost:8088), add the Postgres connection, create datasets from the three tables, and open the **Student Stress Monitoring** dashboard.
 
 ---
 
