@@ -23,9 +23,9 @@ This project shows a complete **ETL pipeline** using **Python + PySpark** to cle
 2. Download this project from GitHub and unzip.  
 3. Open the folder in **VS Code**.
 4. In a terminal, run:
-   python -m venv venv
-   source venv/bin/activate         #Windows: venv\Scripts\activate
-   pip install -r requirements.txt
+   - python -m venv venv
+   - source venv/bin/activate         #Windows: venv\Scripts\activate
+   - pip install -r requirements.txt
 
 6. Put the two CSV files into `data/raw/` with these names:
    - `Stress_Dataset.csv`
@@ -33,9 +33,8 @@ This project shows a complete **ETL pipeline** using **Python + PySpark** to cle
 
 7. Start PostgreSQL. Note your password for the `postgres` user.  
 8. Run the ETL:
-   
-   python etl/transform/execute.py
-   
+   - python etl/transform/execute.py
+     
 9. Open **Superset** (usually http://localhost:8088), add the Postgres connection, create datasets from the three tables, and open the **Student Stress Monitoring** dashboard.
 
 ---
@@ -55,20 +54,20 @@ This project shows a complete **ETL pipeline** using **Python + PySpark** to cle
 
 ```
 stress_etl_project/
-├─ app/
-├─ config/
-├─ data/
-│  ├─ raw/                # place your 2 CSVs here 
-│  └─ extracted/
-├─ etl/
-│  ├─ extract/
-│  ├─ transform/
-│  │  └─ execute.py       # run this file
-│  └─ load/
-├─ logs/
-├─ README.md
-├─ requirements.txt
-└─ run.sh                 
+|- app/
+|- config/
+|- data/
+|  |-raw/                # place your 2 CSVs here
+|  |-extracted/
+|- etl/
+|  |-extract/
+|  |-transform/
+|  |  |- execute.py        # run this file
+|  |-load/
+|- logs/
+|- README.md
+|- requirements.txt
+|- run.sh
 
 ```
 
@@ -79,14 +78,14 @@ stress_etl_project/
 Open a terminal **inside the project folder**, then:
 
 ```
-python -m venv venv
+- python -m venv venv
 # Activate it
-# Linux:
-source venv/bin/activate
+# LInux:
+-source venv/bin/activate
 # Windows:
-venv\Scripts\activate
+- venv\Scripts\activate
 # Install all needed packages
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 ```
 
@@ -120,7 +119,7 @@ Download or copy these two CSVs and put them into `data/raw/`:
 From the project folder, with the virtualenv **activated**:
 
 ```
-python etl/transform/execute.py
+- python etl/transform/execute.py
 
 ```
 
@@ -138,12 +137,12 @@ Open a terminal and run:
 ```
 
 # Linux/Mac (psql)
-psql -U postgres -h localhost -d postgres
+- psql -U postgres -h localhost -d postgres
 # then inside psql:
-\dt
-SELECT COUNT(*) FROM curated_student;
-SELECT COUNT(*) FROM curated_stress_levels;
-SELECT COUNT(*) FROM master_table;
+- \dt
+- SELECT COUNT(*) FROM curated_student;
+- SELECT COUNT(*) FROM curated_stress_levels;
+- SELECT COUNT(*) FROM master_table;
 
 ```
 
@@ -154,10 +153,10 @@ SELECT COUNT(*) FROM master_table;
 1. If it’s your first time:
    ```
    # (inside your Python venv)
-   superset fab create-admin
-   superset db upgrade
-   superset init
-   superset run -p 8088
+   - superset fab create-admin
+   - superset db upgrade
+   - superset init
+   - superset run -p 8088
 
    ```
    Open http://localhost:8088 and log in.
@@ -166,7 +165,7 @@ SELECT COUNT(*) FROM master_table;
    - Go to **Settings → Database Connections → + DATABASE**
    - then **Connect**.
 
-  \\ After connecting, PostgreSQL appears in **Datasets → Databases**.
+     \\ After connecting, PostgreSQL appears in **Datasets → Databases**.
 
 ---
 
@@ -211,9 +210,9 @@ Now create a dashboard:
 Each time you want to re-run with the same setup:
 ```
 # in project folder
-source venv/bin/activate        # Windows: venv\Scripts\activate
-python etl/transform/execute.py
-superset run -p 8088            # if Superset isn’t already running
+- source venv/bin/activate        # Windows: venv\Scripts\activate
+- python etl/transform/execute.py
+- superset run -p 8088            # if Superset isn’t already running
 
 ```
 
